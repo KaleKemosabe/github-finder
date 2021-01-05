@@ -3,10 +3,9 @@ import React, { Fragment } from 'react';
 const About = () => {
     return (
         <Fragment>
-            <div>
+            <div className="container about-section">
                 <h1>About this app</h1>
-                <p>app to search github users</p>
-                <p>version 1.0</p>
+                <p>This app was built as an exercise to learn React. The structure is based on Brad Traversy's udemy course called React Front to Back.</p>
             </div>
         </Fragment>
     );

@@ -12,18 +12,11 @@ const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
     }, []);
 
     const {
-        name,
         avatar_url,
         location,
         bio,
-        blog,
         login,
-        html_url,
-        followers,
-        following,
-        public_repos,
-        public_gists,
-        hireable
+        html_url
     } = user;
 
     if (loading) return <Spinner />;
@@ -31,8 +24,6 @@ const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
     return (
         <Fragment>
             <Link to="/" className="btn btn-light">Back to Search</Link>
-            Hireable: {''}
-            {hireable ? <i className="fas fa-check text-success" /> : <i className="fas fa-times-circle text-danger" /> }
             <div className="card grid-2">
                 <div className="all-center">
                     <img 
@@ -45,11 +36,10 @@ const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
                 </div>
                 <div>
                     {bio && (<Fragment>
-                        <h3>Bio</h3>
                         <p>{bio}</p>
                     </Fragment>
                     )}
-                    <a href={html_url} className="btn btn-dark my-1">
+                    <a href={html_url} className="btn btn-dark">
                         Visit Github profile
                     </a>
                 </div>

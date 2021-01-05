@@ -6,7 +6,7 @@ const Repos = ({ repos }) => {
     return repos.map(repo => <RepoItem repo={repo} key={repo.id} />)
 };
 
-Repos.protoTypes = {
+Repos.PropTypes = {
     repos: PropTypes.array.isRequired
 };
 

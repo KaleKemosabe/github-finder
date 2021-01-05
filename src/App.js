@@ -60,7 +60,7 @@ const App = () => {
 
   return (
     <Router>
-      <div className="App">
+      <div>
         <Navbar />
         <div className="container">
           <Alert alert={alert} />
@@ -96,6 +96,5 @@ const App = () => {
     </Router>
   );
 }
-
 
 export default App;

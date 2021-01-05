@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 const Search =  ({ searchUsers, showClear, clearUsers, setAlert }) => {
@@ -7,7 +8,7 @@ const Search =  ({ searchUsers, showClear, clearUsers, setAlert }) => {
     const onSubmit = (e) => {
         e.preventDefault();
         if (text === '') {
-            setAlert('Please enter something on search', 'light');
+            setAlert('Oh come on... write something on search!');
         } else {
             searchUsers(text);
             setText('');
@@ -22,14 +23,14 @@ const Search =  ({ searchUsers, showClear, clearUsers, setAlert }) => {
                 <input 
                     type="text" 
                     name="text" 
-                    placeholder="Search users" 
+                    placeholder="Search Github Users" 
                     value={text} 
                     onChange={onChange} 
                 />
                 <input type="submit" className="btn btn-dark btn-block" />
             </form>
             {showClear && (
-                <button className="btn btn-block btn-light" onClick={clearUsers}>Clear</button>
+                <Button className="clear-btn btn-block" onClick={clearUsers}>Clear</Button>
             )}
         </div>
     )

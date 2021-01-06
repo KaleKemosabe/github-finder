@@ -13,6 +13,7 @@ const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
 
     const {
         avatar_url,
+        name,
         location,
         bio,
         login,
@@ -24,14 +25,15 @@ const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
     return (
         <Fragment>
             <Link to="/" className="btn btn-light">Back to Search</Link>
-            <div className="card grid-2">
-                <div className="all-center">
+            <div className="card">
+                <div>
                     <img 
                         src={avatar_url} 
-                        className="round-img" alt="profile-photo" 
-                        style={{ width: "150px" }} 
+                        alt="profile-photo" 
+                        style={{ marginTop: "1rem", width: "150px", borderRadius: "50%" }} 
                     />
-                    <h1>{login}</h1>
+                    <h1 className="profile-name">{name}</h1>
+                    <h5>Github login: {login}</h5>
                     <p>Location: {location}</p>
                 </div>
                 <div>
@@ -39,7 +41,7 @@ const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
                         <p>{bio}</p>
                     </Fragment>
                     )}
-                    <a href={html_url} className="btn btn-dark">
+                    <a href={html_url} className="btn btn-dark github_url_btn">
                         Visit Github profile
                     </a>
                 </div>

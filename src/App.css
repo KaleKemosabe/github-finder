@@ -38,6 +38,12 @@ body {
 
 /* Search */
 
+.spinner {
+  width: 15rem;
+  margin: 0 auto;
+  display: block;
+}
+
 .container {
   max-width: 992px;
   margin: 0 auto;
@@ -121,6 +127,12 @@ button {
 }
 
 /* user details */
+
+.user-page-img {
+  margin-top: 1rem;
+  width: 15rem;
+  border-radius: 50%;
+}
 
 .profile-name {
   margin-top: 1rem;

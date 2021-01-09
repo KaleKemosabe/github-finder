@@ -28,9 +28,9 @@ const User = ({ user, loading, getUser, getUserRepos, repos, match }) => {
             <div className="card">
                 <div>
                     <img 
+                        className="user-page-img"
                         src={avatar_url} 
                         alt="profile-photo" 
-                        style={{ marginTop: "1rem", width: "150px", borderRadius: "50%" }} 
                     />
                     <h1 className="profile-name">{name}</h1>
                     <h5>Github login: {login}</h5>
